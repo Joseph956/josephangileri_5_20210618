@@ -1,11 +1,6 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+/****************index.html***********************/
+
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -13,16 +8,88 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-weight: inherit;
 	font-style: inherit;
 	font-size: 100%;
-	font-family: inherit;
+	font-family: 'roboto', sans-serif;
 	vertical-align: baseline;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+header {
+    background-image: url('/images/teddy_4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    position: relative;
 }
 
+#grid-panier {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-row-gap: 1rem;
+    grid-template-areas: 
+    "header"
+    "produitsdupanier"
+    "footer"
+    ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+li a {
+    padding-left: 5px;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* html { */
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+/* } */
+
+:root {
+    font-size: 62.5%; /****1rem = 10px****/
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.titre-containerpanier {
+    font-size: 2rem;
+}
+
+.produit-panier {
+    color: white;
+}
+
+div {
+    font-size: 1.6rem;
+}
+
+/**************fin index.hhtml*************/
+
+/**************produit
 
 /*****************************************
+**********mise en page index.html*********
 *****************************************/
 .produits {
     width: 100%;
@@ -34,17 +101,29 @@ html {
 }
 
 .container-produits {    
-    width: 50%;
+    width: 30%;
     margin: auto;
+    background-color: white;
+    border-radius: 24px;
 }
 
-.oursons {
+.ourson {
     border: black 1px solid;
     margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 24px;
+    padding: 5px 5px 5px 5px;
+    align-content: stretch;
+    margin: 35px 30px;
+    box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece;
 }
 
 .imageProduits {
     width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 
@@ -83,13 +162,13 @@ img {
 
 
 
-figure {
+/* figure {
     
-}
+} */
 
-/*************************************************************************
-******************************Page produit********************************
-*************************************************************************/
+/*******************************************
+***********mise en Page produit.html*******
+*******************************************/
 .produit {
     width: 70%;
     height: auto;
@@ -106,13 +185,16 @@ figure {
     display: flex;
     flex-direction: column;
     width: auto;
+    height: auto;
 }
 
 
 .imageProduit {
     width: 100%;
-    height: 35vw;
+    height: 30vw;
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .flex-produit {
@@ -126,4 +208,214 @@ figure {
     justify-content: center;
     width: 50%;
     margin-left: 10rem;
+}
+
+/**************************************
+*********mise en page panier***********
+**************************************/
+/********page panier html*************/
+.container-panier {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.container-panier ion-icons {
+    font-size: 25px;
+    color: blue;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.entete-produit {
+    width: 100%;
+    /* max-width: 850px; */
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+}
+
+.produits-titre {
+    width: 25%;
+}
+
+.couleurs {
+    width: 25%;
+    border-bottom: 4px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.nom {
+    width: 25%;
+    border-bottom: 4px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.quantite {
+    width: 25%;
+    border-bottom: 4px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.total {
+    width: 5%;
+    border-bottom: 4px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+/*******page panier js***************/
+
+#produitsdupanier {
+    display: flex;
+    /* flex-direction: column; */
+    margin: auto;
+    min-width: 80vw;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.produits-selectionne {
+    /* width: 80vw; */
+    margin: auto;
+}
+.imagesPanier {
+    width: 10%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    border-radius: 20px;
+}
+
+.panier-recapitulatif {
+    background-color: rgb(177, 181, 221);
+    /* display: flex; */
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 3rem;
+}
+
+.panier-vide {
+    background-color: rgb(177, 181, 221);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-viderPanier {
+    background-color: rgb(177, 181, 221);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 2rem;
+}
+
+.panier-montant-total {
+    background-color: rgb(211, 123, 40);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 3rem;
+}
+
+/**********************panier.html fin*************************/
+
+/************************************************************
+******************formulaire de commande*********************
+************************************************************/
+.container-formulaireCmd {
+    border: 2px black solid;
+    background-color: rgb(245, 223, 208);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+    margin: auto;
+}
+
+.formulaireTitre {
+    background-color: cadetblue;
+    text-align: center;
+    width: 80vw;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.formContact {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.formulaireCoordonnees {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 80vw;
+    margin: auto;
+    font-size: 2rem;
+}
+
+.btnValider {
+    background-color: cadetblue;
+    text-align: center;
+    width: 80vw;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.infoChampManquant {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.coordonnee{
+    background-color: bisque;
+    width: 80vw;
+}
+
+/************************************************
+            Container création clients
+***********************************************/
+#containerCreationClient {
+    width: 80vw;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.titreConfirmation {
+    text-align: center;
+    font-weight: bold;
+}
+
+.creationClient {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    }
+
+
+p:nth-child(1){
+    color: red;
+    text-align: center;
 }

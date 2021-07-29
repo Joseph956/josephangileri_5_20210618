@@ -2,57 +2,39 @@
 /**********************************************************
  * 
  **********************************************************/
-// Déclaration de l'objet "Oursons"
-let Oursons = {  
-    _id: "_id",
-    imageUrl: "imageUrl",
-    name: "name",
-    price: "price",
-    description: "description",
-    colors: "colors",
-  };
+
   
-  // // Déclaration de la class "ourson"
-  class ourson {   
-    constructor(_id, imageUrl, name, price, description, colors) {
-    this._id = _id;
-    this.imageUrl = imageUrl;
-    this.name = name;
-    this.price = price;
-    this.description =description;
-    this.colors =colors;
-    }
-  };
+
 
 // Déclaration de variables
 let _id = [];
-let nomproduit = [];
+let nomProduits = [];
 let descriptionProduits = [];
 let imageUrl = [];
 let prixProduits = [];
 let couleurProduits = [];
 let structureProduits = "";
 let i = [];
-
+let orderId = [];
 
 /**************************************************************
  * 
  *************************************************************/
-(async function produits() {
-    const produits = await getProduits();
-    console.table(produits);
-    for (produit of produits) {
-        displayProduit(produit);
+(async function products() {
+    const products = await getProducts();
+    // console.table(produits);
+    for (product of products) {
+        displayProduct(product);
     }   
 })();
     
-function getProduits() {
+function getProducts() {
     return fetch(`http://localhost:3000/api/teddies/`)
     .then(function(httpBodyResponse) {
         return httpBodyResponse.json()
     })
-    .then(function(produits) {       
-        return produits
+    .then(function(products) {       
+        return products
     }) 
     .catch(function(error) {
         alert(error)
@@ -60,32 +42,31 @@ function getProduits() {
 }
 
 // Afficher tous les produits 
-function displayProduit() {
+function displayProduct(product) {
+    console.log(product);
     document.getElementById("produits").innerHTML += 
    `   
     <div class="container-produits"> 
-        <figure class="oursons">
+        <figure class="ourson">
             <div>  
-                <a class="liensProduits" href="/frontend/produit.html?id=${produit._id}">
-                    <img class="imageProduits" src="${produit.imageUrl}" alt="">
+                <a class="liensProduits" href="/frontend/produit.html?id=${product._id}">
+                    <img class="imageProduits" src="${product.imageUrl}" alt="">
                 </a>
             </div>
             <div>
                 <figcaption class="infodiapos">
-                    <h2 class="nomProduits"><span>${produit.name}</span></h2>
+                    <h2 class="nomProduits"><span>${product.name}</span></h2>
                     <div class="vide"></div>
-                    <div class="prixProduits"><span>${produit.price /100} € </span></div>
+                    <div class="prixProduits"><span>${product.price /100},00 € </span></div>
                 </figcaption>
             </div>
             <div>
-                <p class="descriptionProduits"><span>${produit.description}</span></p>
+                <p class="descriptionProduits"><span>${product.description}</span></p>
             </div>                
         </figure>
     </div>
     `
 }
-
-getProduits(produits);
 
 
 

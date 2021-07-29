@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/62fdb3f298.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/frontend/css/style.css">
     <title>Orinoco produits</title>
 </head>
 <body>
     <main>
 <!-- <header> -->
+    <div id="grid-panier">
         <header>
             <a href="/frontend/index.html">
                 <img class="logo" src="/images/logo.png" alt="logo Orinoco">
@@ -22,19 +23,24 @@
                 </ul>
             </nav>
         </header>
+    </div>
 <!-- <fin-header> -->
     
         <div class="flex-produit" >
-            <div id="produit" class="produit"></div>
+            <div id="product" class="product"></div>
             <div class="validation">
                 <div>
                     <form>
-                        <label for="option-produit" >Choisir la couleurs de votre produit : </label>
-                        <select id="option-produit" name="option_produit" class="option_produit"></select>
+                        <label for="option_product" >Choisir la couleurs de votre produit : </label>
+                        <select id="option_product" name="option_product" class="option-product"></select>
+                    </form>
+                    <form>
+                        <label for="quantite">Choisir la quantité de votre produit</label>
+                        <select name="quantite" id="quantite"></select>
                     </form>
                 </div>
                 <div>
-                    <button class="btn-valider" type="soumettre" action="btn-envoyer">
+                    <button class="btn-valider" type="submit" action="btn-envoyer">
                     Ajouter un article dans le panier        
                     </button>
                 </div>
