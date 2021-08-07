@@ -1,32 +1,37 @@
 const orderId = localStorage.getItem("orderId");
-console.log(orderId);
-
 const total = localStorage.getItem("prixTotal");
-console.log(`total : ${total}`);
 
 const confirmationCmd = document.querySelector('#containerCreationClient');
-
 const confirmationCmdHtml = `
-    <h1 class="titreConfirmation" >Contenu de votre panier</h1>
-
     <div class="creationClient">
-        <p>Récapitulatif de votre commande</p>
-        <p>Commande numéro : 
-            <span class="nbCmd">${orderId}</span> 
-        </p>
-        <p>Le montant total de votre commande
-            <span class="totCmd">${total /100} € </span>
-        </p>
+        <figure class="oursonConfirm">  
+            <figcaption class="confirmationCmd">
+                <h1>Bordereau de commande</h1>    
+                <p class="cmdNb"> - Facture numéro - <br>
+                    <span class="nbCmd">${orderId}</span>
+                </p>
+                <p>Merci pour votre commande <br>Montant total - 
+                    <span class="totCmd">${total /100} € </span>
+                </p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <div>
+        <h2 class="facturation" >Vous recevrez votre facture par mail après réglement de votre commande.
+        </h2>
     </div>
     `;
 
 confirmationCmd.insertAdjacentHTML("afterbegin", confirmationCmdHtml);
-
 function removeLocalStorage(key) {
     localStorage.removeItem(key);
-
-}
+};
 
 removeLocalStorage("orderId");
 removeLocalStorage("products");
 removeLocalStorage("prixTotal");
+
+if (orderId == null || total == null) {
+    window.location.href="index.html";
+};

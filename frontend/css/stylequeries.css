@@ -1,0 +1,293 @@
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    header {
+        height: 20vw;
+    }
+    .logo {
+        width: 25vw;
+        height: 15vw;
+    }
+}
+@media all and (min-width: 568px) and (max-width: 768px) {
+    header {
+        height: 20vw;
+    }
+    .logo {
+        width: 25vw;
+        height: 15vw;
+    }
+}
+@media all and (min-width: 250px) and (max-width: 568px) {
+    header {
+        height: 20vw;
+    }
+    .logo {
+        width: 25vw;
+        height: 15vw;
+    }
+}
+/**********************************************************
+                Queries page index.html
+**********************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .produits {
+        flex-direction: column;
+    }
+    .container-produits {
+        width: auto;
+    }
+    .ourson {
+        flex-direction: row;
+    }
+    .imageProduits {
+        width: 35vw;
+        height: 25vw;
+        object-fit: cover;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+    }
+    .information {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .infodiapos {
+        flex-direction: column;
+    }
+    .descriptionProduits {
+        font-size: 2rem;
+    }
+    p:nth-child(1) {
+        color: black;
+    }
+}
+@media all and (min-width: 568px) and (max-width: 768px) {
+    .produits {
+        flex-direction: column;
+    }
+    .container-produits {
+        width: auto;
+    }
+    .ourson {
+        flex-direction: row;
+    }
+    .imageProduits {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .information {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .infodiapos {
+        flex-direction: column;
+    }
+    .descriptionProduits {
+        font-size: 2rem;
+    }
+    p:nth-child(1) {
+        color: black;
+    }
+}
+@media all and (min-width: 250px) and (max-width: 568px) {
+    .produits {
+        flex-direction: column;
+    }
+    .container-produits {
+        width: auto;
+    }
+    .ourson {
+        flex-direction: column;
+    }
+    .imageProduits {
+        width: 100%;
+        height: 55vw;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .information {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .infodiapos {
+        flex-direction: column;
+    }
+    .prixProduits {
+        font-size: 2rem;
+    }
+    .descriptionProduits {
+        font-size: 2rem; 
+    }
+    p:nth-child(1) {
+        text-align: start;
+        color: black;
+    }
+}
+/**********************************************************
+                Queries page produit.html
+**********************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .flex-produit {
+        flex-direction: column;
+    }
+    .page-produit {
+        flex-direction: column;
+    }
+    .ourson {
+        flex-direction: row;
+    }
+    .imageProduit {
+        width: 35vw;
+        height: 100%;
+        object-fit: cover;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+    }
+    .information {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .infodiapos {
+        flex-direction: column;
+    }
+    .descriptionProduits {
+        font-size: 2rem;
+    }
+    .colorQuantite {
+        font-size: 2.6rem;
+    }
+    .quantite {
+        margin: 1rem;
+    }
+    .choix {
+        margin: 1rem;
+        width: 30%;
+    }
+}
+@media all and (min-width: 568px) and (max-width: 768px) {
+    .flex-produit {
+        flex-direction: column;
+    }
+    .ourson {
+        flex-direction: column;
+    }
+    .imageProduit {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .infodiapos {
+        flex-direction: row;
+    }
+    .colorQuantite {
+        font-size: 2.6rem;
+    }
+    .quantite {
+        margin: 1rem;
+    }
+    .choix {
+        margin: 1rem;
+        width: 30%;
+    }
+}
+@media all and (min-width: 200px) and (max-width: 568px) {
+    .flex-produit {
+        flex-direction: column;
+    }
+    .btnAjouter {
+        font-size: 1.5rem;
+    }
+}
+/**********************************************************
+                Queries page panier.html
+**********************************************************/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .oursInfos {
+        font-size: 1.8rem;
+    }
+}
+@media all and (min-width: 568px) and (max-width: 768px) {
+    .oursInfos {
+        font-size: 1.3rem;
+    }
+}
+@media all and (min-width: 200px) and (max-width: 568px) {
+    .supprimeArticle {
+        font-size: 1rem;
+    }
+    .imagesPanier {
+        width: 30%;
+    }
+    .infosOursons {
+        flex-direction: column;
+    }
+    .oursInfos {
+        font-size: 1rem;
+        padding: 0rem;
+    }
+    .identite {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .identiteClient {
+        width: auto;
+    }
+    .localité {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .localiteClient {
+        width: auto;
+    }
+    .btn-viderPanier {
+        font-size: 1.2rem;
+    }
+    .btnValider {
+        font-size: 1.2rem;
+    }
+}
+/**********************
+Formulaire de commande
+**********************/
+@media all and (min-width: 200px) and (max-width: 688px) {
+    .formContact {
+        font-size: 1.6rem;
+    }
+    .coordonnee {
+        font-size: 1.5rem;
+    }
+}
+/**********************************************************
+                Queries page confirmation.html
+**********************************************************/
+@media all and (min-width: 568px) and (max-width: 768px) {
+    div {
+        font-size: 1.6rem;
+    }
+    .flexInfos {
+        flex-direction: column;
+    }
+}
+@media all and (min-width: 250px) and (max-width: 568px) {
+    div {
+        font-size: 1.5rem;
+    }
+    .flexInfos {
+        flex-direction: column;
+    }
+    .oursNom {
+        padding: 0 0rem 0 0rem;
+    }
+    .oursColor {
+        padding: 0 0rem 0 0rem;
+    }
+    .oursQuantite {
+        padding: 0 0rem 0 0rem;
+    } 
+    .oursPrix {
+        padding: 0 0rem 0 0rem;
+    }
+}

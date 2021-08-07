@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <script src="https://kit.fontawesome.com/62fdb3f298.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/frontend/css/style.css">
+        <link rel="stylesheet" href="/frontend/css/stylequeries.css">
         <title>Orinoco panier</title>
     </head>
     <body>
@@ -21,7 +23,8 @@
                 <div>
                     <nav>
                         <ul>
-                            <li><a href="/frontend/panier.html">Produits dans le panier</a></li>
+                            <li><a href="/frontend/index.html">Accueil</a></li>
+                            <li><a href="/frontend/panier.html">Panier</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -29,63 +32,62 @@
         </div>  
 <!-- <fin-header> -->
 
-<!-- Tableau des produits -->
-<!-- <h2 class="titre-containerpanier" >Les produits de votre panier</h2> -->
-
-<!-- entête du panier -->
-        <div id="container-panier" >
-            <div class="entete-produit">
-                <h3 class="produits-titre">Produits</h3>
-                <h3 class="nom">Nom</h3>
-                <h3 class="couleurs">Couleurs</h3>
-                <h3 class="quantite">Quantité</h3>
-                <h3 class="total">total</h3>
-            </div>
-
-<!-- recap des produits nom, prix, etc -->
-            <div class="produits-selectionne"></div>
+        <h1 class="titreConfirmation" >Les produits de votre panier</h1>
+        <div class="produits-selectionne"></div>
 
 <!-- formulaire clients -->
-            <div class="container-formulaireCmd"></div>
-                <div id="formulaireCmd">
-                    <h3 class="formulaireTitre">Formulaire de commande</h3>
+        <div class="container-formulaireCmd">
+            <div id="formulaireCmd">
+                <h3 class="formulaireTitre">Formulaire de commande</h3>
                 
-                    <form class="formulaireCoordonnees">
-                        <label class="formContact" for="lastName">Nom :</label>
-                        <span id="nomManquant" class="infoChampManquant"></span>
-                        <input class="coordonnee" type="text" id="firstName" name="nom" required />
-                    
-                        <label class="formContact" for="firstName">Prénom :</label>
-                        <span id="prenomManquant" class="infoChampManquant"></span>
-                        <input class="coordonnee" type="text" id="lastName" name="prenom" required />
+                <form class="formulaireCoordonnees">
+                    <div class="identite">
+                        <div class="identiteClient">
+                            <label class="formContact" for="lastName">Nom :</label>
+                            <span id="nomManquant" class="infoChampManquant"></span>
+                            <input class="coordonnee" type="text" id="firstName" name="nom" required />
+                        </div>
+                        <div class="identiteClient">
+                            <label class="formContact" for="firstName">Prénom :</label>
+                            <span id="prenomManquant" class="infoChampManquant"></span>
+                            <input class="coordonnee" type="text" id="lastName" name="prenom" required />
+                        </div>
+                    </div>
+
+                    <label class="formContact" for="address">Adresse :</label>
+                    <span id="adresseManquante" class="infoChampManquant"></span>
+                    <textarea class="coordonnee" id="address" name="adresse" required></textarea>
+
+                    <div class="localité" >
+                        <div class="localiteClient">
+                            <label class="formContact" for="codePostal">Code Postal :</label>
+                            <span id="codePostalManquant" class="infoChampManquant"></span>
+                            <input class="coordonnee" type="text" id="codePostal" name="codePostal" required />
+                        </div>
+                        <div class="localiteClient">
+                            <label class="formContact" for="city">Ville :</label>
+                            <span id="villeManquante" class="infoChampManquant"></span>
+                            <input class="coordonnee" type="text" id="city" name="ville" required />
+                        </div>
+                    </div>
+
+                    <label class="formContact" for="email">E-mail :</label>
+                    <span id="emailManquant" class="infoChampManquant"></span>
+                    <input class="coordonnee" type="text" id="email" name="email" required >
                 
-                        <label class="formContact" for="address">Adresse :</label>
-                        <span id="adresseManquante" class="infoChampManquant"></span>
-                        <textarea class="coordonnee" id="address" name="adresse" required></textarea>
-                        
-                        <label class="formContact" for="city">Ville :</label>
-                        <span id="villeManquante" class="infoChampManquant"></span>
-                        <input class="coordonnee" type="text" id="city" name="ville" required />
-                
-                        <label class="formContact" for="codePostal">Code Postal :</label>
-                        <span id="codePostalManquant" class="infoChampManquant"></span>
-                        <input class="coordonnee" type="text" id="codePostal" name="codePostal" required />
-                
-                        <label class="formContact" for="email">E-mail :</label>
-                        <span id="emailManquant" class="infoChampManquant"></span>
-                        <input class="coordonnee" type="text" id="email" name="email" required >
-                
-                        <button id="validerFormulaire" class="btnValider" type="submit" name="validerFormulaire">
+                    <button id="validerFormulaire" class="btnValider" type="submit" name="validerFormulaire">
                             Confirmer la commande
-                        </button>
-                    </form>
-                </div>
+                    </button>
+                </form>
             </div>
+        </div>
 <!-- end tableau produits -->
-
         <footer>
-
+            <ul>
+                <li>Copyright Joseph ANGILERI projet orinoco "Formation developpeur web été 2021</li>
+            </ul>
         </footer>
     </body>
+    <script src="/frontend/js/models/Client.js"></script>
     <script src="/frontend/js/panier.js"></script>
 </html>

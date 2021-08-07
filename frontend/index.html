@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/62fdb3f298.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/frontend/css/style.css">
-    <title>Orinoco accueil</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <script src="https://kit.fontawesome.com/62fdb3f298.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/frontend/css/style.css">
+        <link rel="stylesheet" href="/frontend/css/stylequeries.css">
+        <title>Orinoco accueil</title>
+    </head>
 <body>
     <main>
 <!-- <header> -->
-    <div id="grid-panier">
-        <header>
-                <div>
-                    <a href="">
-                        <img class="logo" src="/images/logo.webp" alt="logo Orinoco">
-                    </a>
-                </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <li><a href="/frontend/panier.html">Panier</a></li>
-                        </ul>
-                    </nav>
-                </div>
-        </header>
-    </div>
+        <div id="grid-panier">
+            <header>
+                    <div>
+                        <a href="/frontend/index.html">
+                            <img class="logo" src="/images/logo.webp" alt="logo Orinoco">
+                        </a>
+                    </div>
+                    <div>
+                        <nav>
+                            <ul>
+                                <li><a href="/frontend/index.html">Accueil</a></li>
+                                <li><a href="/frontend/panier.html">Panier</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+            </header>
+        </div>
 <!-- <fin-header> -->
-        
-        
+
+<!-- Affichage des produits -->
         <div id="produits" class="produits"></div>
-        
-    </main>        
-    <script src="/frontend/js/index.js" ></script>
-    
-</body>
+<!-- fin affichage produits -->
+
+    </main>       
+        <footer>
+            <ul>
+                <li>Copyright Joseph ANGILERI projet orinoco "Formation developpeur web été 2021</li>
+            </ul>
+        </footer>    
+        <script src="/frontend/js/index.js" ></script>
+    </body>
 </html>

@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/css/style.css">
-    <title>Confirmer votre commande</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="stylesheet" href="/frontend/css/style.css">
+        <link rel="stylesheet" href="/frontend/css/stylequeries.css">
+        <title>Confirmer votre commande</title>
+    </head>
+    <body>
 <!-- <header> -->
-    <div id="grid-panier">
-        <header>
-            <div>
-                <a href="/frontend/index.html">
-                    <img class="logo" src="/images/logo.png" alt="logo Orinoco">
-                </a>
-            </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="/frontend/panier.html">Produits dans le panier</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </div>  
+        <div id="grid-panier">
+            <header>
+                <div>
+                    <a href="/frontend/index.html">
+                        <img class="logo" src="/images/logo.webp" alt="logo Orinoco">
+                    </a>
+                </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="/frontend/index.html">Accueil</a></li>
+                            <li><a href="/frontend/panier.html">Panier</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>  
 <!-- <fin-header> -->
 
 
 <!-- Création du client-->
 
 <div id="containerCreationClient"></div>
+
+        <footer>
+            <ul>
+                <li>Copyright Joseph ANGILERI projet orinoco "Formation developpeur web été 2021</li>
+            </ul>
+        </footer>
     
-</body>
-<script src="/frontend/js/panier.js"></script>
-<script src="/frontend/js/confirmation.js"></script>
+    </body>
+    <script src="/frontend/js/models/Client.js"></script>
+    <script src="/frontend/js/panier.js"></script>
+    <script src="/frontend/js/confirmation.js"></script>
 </html>
